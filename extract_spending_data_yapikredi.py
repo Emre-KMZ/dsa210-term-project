@@ -35,26 +35,19 @@ def extract_spending_data(pdf_path):
     # print(text)
 
     # regex pattern to extract the spending data: format is "dd MMMM yyyy description amount"
-    spending_pattern = r"\b\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4}\s+[A-Za-zÇŞĞİÖÜçşğıöü\s]+\s+\d+,\d{2}\b"
+    # spending_pattern = r"\b\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4}\s+[A-Za-zÇŞĞİÖÜçşğıöü\s]+\s+\d+,\d{2}\b"
+    spending_pattern = r"(\d{1,2})\s+(Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+(\d{4})\s+([A-Za-zİıĞğÜüŞşÖöÇç0-9\s\.-]+)\s+TR\s+(\d{1,3}(?:\.\d{3})*,\d{2})"
 
     matches = re.findall(spending_pattern, text)
 
     spending_data = []
     for match in matches:
-        # Extract the spending data
-        splitted = match.split()
-        date = " ".join(splitted[:3])
-        description = " ".join(splitted[3:-1])
-        amount = splitted[-1]
-        amount = amount.replace(",", ".")  # Replace comma with a dot for decimal point
-
-        # find which day of the year it is
-        no_day_of_2024 = 0
-        date_split = date.split()
-        month_name = date_split[1]
-        day = int(date_split[0])
-        year = int(date_split[2])
-        no_day_of_2024 = months[month_name] + day
+        day = match[0]
+        month = match[1]
+        year = match[2]
+        description = match[3]
+        amount = match[4]
+        no_day_of_2024 = months[month] + int(day)
 
         
 
@@ -62,7 +55,7 @@ def extract_spending_data(pdf_path):
         spending_data.append({
             "date": no_day_of_2024,
             "description": description,
-            "amount": float(amount)
+            "amount": float(amount.replace(".", "").replace(",", "."))
         })
 
     
@@ -78,6 +71,7 @@ data = []
 
 
 for file in os.listdir(data_folder):
+# for file in ["-2.PDF"]:
     pdf_path = os.path.join(data_folder, file)
     spending_data = extract_spending_data(pdf_path)
     data.extend(spending_data)
