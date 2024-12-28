@@ -30,7 +30,7 @@ I hypothesize that my spending habits are influenced by weather conditions, part
 ## **Data Sources**
 
 ### **Weather Data**
-- **[OpenWeatherMap API](https://openweathermap.org/api)**:
+- **[Open-Meteo API](https://open-meteo.com)**:
   - Provides detailed weather data, including temperature, weather conditions, and timestamps.
 
 ### **Spending Data**
@@ -43,11 +43,11 @@ I hypothesize that my spending habits are influenced by weather conditions, part
 
 ## **Data Collection and Preprocessing**
 ### **Weather Data Collection**:
-- Use the OpenWeatherMap API to fetch daily weather data for my location.
-- Parse and clean the data to ensure consistency, focusing on parameters like:
+- Use the Open-Meteo API to fetch daily weather data for my location. I will use Istanbul, Turkey as my location.
   - Date
-  - Temperature
-  - Weather condition (e.g., sunny, cloudy, rainy)
+  - Temperature (mean, max, min)
+  - Rain (sum)
+  - Snow (sum)
 
 ### **Spending Data Collection**:
 - Export transaction history from Akbank and Yapı Kredi banking apps in a digital format (e.g., CSV, Excel).
