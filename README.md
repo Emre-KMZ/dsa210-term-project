@@ -66,3 +66,36 @@ I hypothesize that my spending habits are influenced by weather conditions, part
     - The transactions that contain "SPOTIFY" in the description were excluded from the analysis. These are my monthly subscription payments to Spotify, which occur automatically on a fixed schedule regardless of weather conditions. Including these transactions would not provide meaningful insights into how weather affects my spending decisions since they are pre-scheduled, automated payments.
   - Check out the [data_fetch_yapikredi.py](data_fetch_yapikredi.py) for implementation details.
 
+
+---
+
+## **Findings**
+
+### Average Daily Spending vs Temperature
+
+The analysis reveals a clear positive correlation between temperature and daily spending habits:
+
+- **Temperature Ranges and Spending Patterns:**
+![Average Daily Spending vs Temperature](static/AverageDailySpendingVSTemperature.png)
+
+This data strongly supports my initial hypothesis about temperature's influence on spending habits. 
+
+Key observations:
+
+1. **Consistent Upward Trend**: There's a clear trend showing increased spending as temperatures rise, with the highest average daily spending (422 TL) occurring in the warmest temperature range (25-30°C).
+
+2. **Significant Spending Jump**: The most notable increase occurs between moderate (15-20°C) and warmer temperatures (20-25°C), with a 62 TL jump in average daily spending. This fact is also affected by the fact that warmer places I've been (such as Bodrum) usually have higher prices than Istanbul, plus I was more likely to spend more money by going out on these places.
+
+3. **Minimal Variation in Colder Weather**: Spending remains relatively stable in cooler temperatures (5-15°C), suggesting that cold weather activities and behaviors are usually consistent. Possible reason behind this is there is usually a fixed minimum amount of money that I spend on a daily basis, such as transportation, food, etc. and this amount is not affected by the weather conditions.
+
+These findings suggest that warmer weather significantly influences spending behavior, possibly due to increased outdoor activities, social engagements, or general mobility during warmer periods.
+  
+
+### Precipitation and Spending Patterns
+
+The analysis also explored the impact of precipitation on daily spending habits:
+![Average Daily Spending vs Precipitation](static/AverageDailySpendingVSPrecipitation.png)
+
+Key observations: 
+
+1. **Higher Spending on Dry Days**: Spending is consistently higher on days with no precipitation, with an average daily spending of 400 TL compared to 358 TL on rainy or snowy days. Which is expected since I am more likely to go out and spend money on dry days.
