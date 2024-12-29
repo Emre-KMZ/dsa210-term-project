@@ -99,3 +99,5 @@ The analysis also explored the impact of precipitation on daily spending habits:
 Key observations: 
 
 1. **Higher Spending on Dry Days**: Spending is consistently higher on days with no precipitation, with an average daily spending of 400 TL compared to 358 TL on rainy or snowy days. Which is expected since I am more likely to go out and spend money on dry days.
+
+### Other Findings
