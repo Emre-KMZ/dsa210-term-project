@@ -6,8 +6,22 @@ I will use the openweathermap api to get the weather data. And save it as a csv 
 
 import requests
 import os
-from dotenv import load_dotenv
 import json
+
+months = {
+    1: 0,
+    2: 31,
+    3: 59,
+    4: 90,
+    5: 120,
+    6: 151,
+    7: 181,
+    8: 212,
+    9: 243,
+    10: 273,
+    11: 304,
+    12: 334
+}
 
 
 ISTANBUL_LAT = 41.0082
@@ -24,9 +38,18 @@ def get_weather_data(start_date, end_date):
     }
     url = "https://archive-api.open-meteo.com/v1/archive"
     response = requests.get(url, params=params)
+    
+    # convert dates to single integer, similar to the format in the csv file 
     data = response.json()
-    print(data)
+    
+    for i,d in enumerate(data["daily"]["time"]):
+        data["daily"]["time"][i] = months[int(d[5:7])] + int(d[8:10])
+
+        
+    
+
     return data
+
 
 if __name__ == "__main__":
     d = get_weather_data("2024-02-27", "2024-12-03")
