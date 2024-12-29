@@ -62,12 +62,6 @@ def extract_spending_data(pdf_path):
 
     return spending_data
 
-def clean_data(data):
-    # remove the data if name contains "V.D." since those are my taxes :)
-    # remove the data if name contains "AJET" since those are flight tickets, that are not relevant for the analysis and also refunded
-    data = [item for item in data if "V.D." not in item["description"] and "AJET" not in item["description"]]
-
-    return data
 
 
 if __name__ == "__main__":
@@ -86,7 +80,6 @@ if __name__ == "__main__":
 
     data = sorted(data, key=lambda x: x["date"]) # sort the data by date for easier analysis
 
-    data = clean_data(data)
 
     output_path = os.path.join(output_folder, "yapikredi_spending_data.csv")
 
