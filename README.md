@@ -101,3 +101,8 @@ Key observations:
 1. **Higher Spending on Dry Days**: Spending is consistently higher on days with no precipitation, with an average daily spending of 400 TL compared to 358 TL on rainy or snowy days. Which is expected since I am more likely to go out and spend money on dry days.
 
 ### Other Findings
+
+- **Fan of Piazza**: My spending data shows that I have eaten at Piazza 68 times in a 279 day interval (which in 3 months of it I wasn't even at the campus) with average cost of 177 TL per transaction (also shows the price raise in the Piazza considered that average meal costs 240+ TL right now). Also, I have eaten at Kucuk Ev (Piazza's biggest competitor) 56 times with an average cost of 136TL per transaction.
+
+- **Cost of Credit Card**: Suprisingly, I didn't know that I was paying a 666 TL annual fee for my credit card, which is a significant amount of money. I will consider changing my credit card to a more cost-effective one. This is not really a part of my analysis but I wanted to give this as a fun fact.
+
