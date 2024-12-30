@@ -162,3 +162,12 @@ This analysis reinforces our earlier findings that while weather does influence 
 - **Cost of Credit Card**: Suprisingly, I wasn't aware that I was paying a 666 TL annual fee for my credit card, which is a significant amount of money. Thanks to DSA210, I will consider changing my credit card to a more cost-effective one. This is not really a part of my analysis but I wanted to give this as a fun fact.
 
 
+## **Limitations & Future Work**
+
+### **Limitations**
+- The analysis is based on a credit card dataset, which might not me fully representative since I also use cash for some transactions. 
+- Even though the data is from my personal credit card, there are many cases which I sometimes pay for my friends and they pay me back, which is not reflected in the data. Similarly, there are some transactions that I made for my family members, which are also damaging the quality of the data.
+- The data from yapikredi is not very detailed, it only contains the transaction date, description, and amount. It would be more beneficial if the data also contained the category of the transaction (e.g., food, transportation, entertainment) to perform a more detailed analysis, which would allow me to see which categories are affected by the weather conditions. For example, I could do a more detailed analysis by excluding the fixed spendings such as food etc. and see if the weather conditions affect the discretionary spending. Or if the data also contained the location of the transaction, I could check the exact weather conditions in the exact location of the transaction, instead of using the weather data for the city.
+
+### **Future Work**
+- Instead of using the mean temperature, I could use the temperature at the exact time of the transaction, which would provide more accurate results (this is not possible since the data does not contain the exact time of the transaction).
