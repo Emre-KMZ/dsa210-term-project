@@ -103,7 +103,7 @@ Key observations:
 
 ### **Day of Week vs Spending Analysis**
 
-![Average Daily Spending vs Day of Week](static/AverageDailySpendingVSDayOfWeek.png)
+![Average Daily Spending vs Day of Week](static/AverageDailySpendingForDaysOfWeek.png)
 
 1. **Weekend Peaks**: 
  - Saturday (503)TL and Friday (490TL) has a noticeable increase in spending compared to other days of the week.
