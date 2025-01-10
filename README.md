@@ -100,7 +100,6 @@ Key observations:
 
 1. **Higher Spending on Dry Days**: Spending is consistently higher on days with no precipitation, with an average daily spending of 387 TL compared to 249 TL (-35.6%) on rainy or snowy days. Which is expected since I am more likely to go out and spend money on dry days.
 
-
 ### **Day of Week vs Spending Analysis**
 
 ![Average Daily Spending vs Day of Week](static/AverageDailySpendingForDaysOfWeek.png)
@@ -108,6 +107,18 @@ Key observations:
 1. **Weekend Peaks**: 
  - Saturday (503)TL and Friday (490TL) has a noticeable increase in spending compared to other days of the week.
  - This suggests that I am more likely to go out and spend money on weekends.
+
+### Weather Impact on Average Daily Spending: Heatmap Visualization
+
+![Heatmap](static/Heatmap.png)
+
+This heatmap visualizes how daily spending varies across weather conditions and temperature ranges.
+
+#### Key Observations
+- Spending is higher on days with **no precipitation**, peaking at **434.42 TL** (25–30°C).
+- Spending decreases on **precipitation days**, lowest at **274.48 TL** (25–30°C).
+- Warmer temperatures boost spending on dry days but lower it on wet days.
+- Expectedly, peak is at **25–30°C** on dry days.
 
 
 
